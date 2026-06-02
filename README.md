@@ -10,7 +10,7 @@ The project focuses on delivering an interactive and visually appealing weather 
 
 **GitHub Repository:**
 
-https://github.com/Anjanisuryaprabha-K/Dynamic-Weather-Dashboard
+https://github.com/TejaswiniDasari07/Dynamic-Weather-Dashboard
 
 ---
 
@@ -144,7 +144,7 @@ Dynamic-Weather-Dashboard/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Anjanisuryaprabha-K/Dynamic-Weather-Dashboard.git
+git clone https://github.com/TejaswiniDasari07/Dynamic-Weather-Dashboard.git
 ```
 
 ### 2. Navigate to Project Folder
