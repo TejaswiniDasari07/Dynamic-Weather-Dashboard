@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌦 Weather Dashboard</h1>
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name">
+            <button id="searchBtn">Search</button>
+            <button id="saveFavBtn">⭐ Save</button>
+            <button id="locationBtn">📍</button>
+            <button id="themeBtn">🌙</button>
+            <div class="dropdown">
+                <button id="favoriteBtn">
+                ⭐ Favorites
+                </button>
+                <button id="clearFavBtn">
+                    Clear Favorites
+                </button>
+                <div
+                    id="favoritesDropdown"
+                    class="dropdown-content">
+                </div>
+                <button id="recentBtn">
+                    Recent ▼
+                </button>
+                <div id="recentDropdown" class="dropdown-content">
+                </div>
+                <button id="clearRecentBtn">
+                    Clear
+                </button>
+            </div>
+        </div>
+
+        <div id="loader">
+            🔄 Loading Weather...
+        </div>
+
+        <div class="weather-card">
+            <h2 id="cityName">
+                City Name
+            </h2>
+            <div class="weather-icon">
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="Weather Icon"
+                    style="display:none;">
+            </div>
+            <h1 id="temperature">
+                --°C
+            </h1>
+            <p id="description">
+                Weather Condition
+            </p>
+            <div class="details">
+                <div class="detail-box">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Humidity</p>
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-wind"></i>
+                    <p>Wind</p>
+                    <span id="wind">-- km/h</span>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <p>Feels Like</p>
+                    <span id="feelsLike">--°C</span>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-smog"></i>
+                    <p>AQI</p>
+                    <span id="aqi">--</span>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-temperature-high"></i>
+                    <p>UV Index</p>
+                    <span id="uv">--</span>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-sun"></i>
+                    <p>Sunrise</p>
+                    <span id="sunrise">--</span>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-moon"></i>
+                    <p>Sunset</p>
+                    <span id="sunset">--</span>
+                </div>
+            </div>
+            <div class="hourly-section">
+                <h2>Hourly Forecast</h2>
+                <div class="hourly-wrapper">
+                    <div class="hourly-scroll">
+                        <div id="hourlyContainer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlights-section">
+                <h2>Today's Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <h4>🌡 Max Temp</h4>
+                        <p id="maxTemp">--°C</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>❄ Min Temp</h4>
+                        <p id="minTemp">--°C</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>🌧 Rain Chance</h4>
+                        <p id="rainChance">--%</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>💨 Max Wind</h4>
+                        <p id="maxWind">-- km/h</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>👁 Visibility</h4>
+                        <p id="visibility">-- km</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h4>☁ Cloud Cover</h4>
+                        <p id="cloudCover">--%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-section">
+                <h2>3-Day Forecast</h2>
+                <div id="forecastContainer"></div>
+            </div>
+        </div>
+
+        <footer>
+            Powered by WeatherAPI © 2026
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
